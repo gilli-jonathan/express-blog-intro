@@ -4,7 +4,7 @@ const PORT = 3000
 
 app.use(express.static('public'))
 
-const array = [ 
+const post = [ 
     {
         titolo: "il ciambellone",
         contenuto: "sarà un torta? sarà una ciambella? è tutte e due le cose",
@@ -47,3 +47,11 @@ app.get('/', (req, res)=> {
 
     res.send('SERVER DEL MIO BLOG')
 })
+
+app.get('/bacheca', (req, res)=> {
+
+    console.log(req.query);
+
+    res.json({post})
+})
+
