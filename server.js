@@ -42,15 +42,11 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res)=> {
-
-    console.log(req.query);
-
+   
     res.send('SERVER DEL MIO BLOG')
 })
 
 app.get('/bacheca', (req, res)=> {
-
-    console.log(req.query);
 
     res.json({post})
 })
